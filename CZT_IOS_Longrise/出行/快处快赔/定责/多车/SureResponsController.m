@@ -331,7 +331,7 @@ NSNumber *caseDutyType;
         [[Globle getInstance].service requestWithServiceIP:[Globle getInstance].serviceURL ServiceName:[NSString stringWithFormat:@"%@/kckpAppValCode",kckpzcslrest] params:bean1 httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
             
             
-            if (![result[@"redes"]isEqualToString:@"通过"]) {
+            if (![result[@"restate"]isEqualToString:@"0"]) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"验证码验证失败，请重新发送" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                 [alert show];
             }
@@ -379,7 +379,7 @@ NSNumber *caseDutyType;
         
         [fvalertView dismiss];
         
-        if (![result[@"redes"]isEqualToString:@"成功"]) {
+        if (![result[@"restate"]isEqualToString:@"0"]) {
 
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"生成事故协议书失败！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];

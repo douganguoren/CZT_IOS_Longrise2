@@ -96,7 +96,10 @@
             FillInformationController *fillController = [storyboard instantiateViewControllerWithIdentifier:@"fillinfomationID"];
             fillController.hidesBottomBarWhenPushed = YES;
             fillController.appcaseno = self.appcaseno;
+            fillController.describeData = self.describeData;
+            fillController.describeString = destextView.text;
             [self.navigationController pushViewController:fillController animated:YES];
+            
         }
         else
         {
@@ -109,7 +112,7 @@
             araVC.describeData = self.describeData;
             araVC.describeString = destextView.text;
             [self.navigationController pushViewController:araVC animated:YES];
-        
+            
         
         }
     } ];

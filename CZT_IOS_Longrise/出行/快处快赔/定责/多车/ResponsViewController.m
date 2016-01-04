@@ -268,7 +268,7 @@
         [fvalertView dismiss];
         NSLog(@"有争议  %@",result);
         NSLog(@"sheng  %@",result[@"redes"]);
-        if (![result[@"redes"]isEqualToString:@"成功"]) {
+        if (![result[@"restate"]isEqualToString:@"0"]) {
         
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"上传案件信息失败！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
